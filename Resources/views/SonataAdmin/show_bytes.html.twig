@@ -1,0 +1,5 @@
+{% extends 'SonataAdminBundle:CRUD:base_show_field.html.twig' %}
+
+{% block field %}
+    <div>{{ value|bytes(attribute(field_description.options, 'binary')|default(true), attribute(field_description.options, 'redisplay')|default(true)) }}</div>
+{% endblock %}

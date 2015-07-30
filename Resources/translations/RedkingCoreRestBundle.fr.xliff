@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="" >
+        <body>
+            <trans-unit id="breadcrumb.link_translation_list">
+                <source>breadcrumb.link_translation_list</source>
+                <target>Traductions</target>
+            </trans-unit>
+            <trans-unit id="Category">
+                <source>Translation</source>
+                <target>Traductions</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_configuration_list">
+                <source>breadcrumb.link_configuration_list</source>
+                <target>Configurations</target>
+            </trans-unit>
+            <trans-unit id="Configuration">
+                <source>Configuration</source>
+                <target>Configurations</target>
+            </trans-unit>
+<!-- LISTE -->
+            <trans-unit id="list.label__action">
+                <source>list.label__action</source>
+                <target>Action</target>
+            </trans-unit>
+            <trans-unit id="list.label_id">
+                <source>list.label_id</source>
+                <target>Identifiant</target>
+            </trans-unit>
+            <trans-unit id="list.label_name">
+                <source>list.label_name</source>
+                <target>Nom</target>
+            </trans-unit>
+            <trans-unit id="list.label_support">
+                <source>list.label_support</source>
+                <target>Support</target>
+            </trans-unit>
+            <trans-unit id="list.label_screen">
+                <source>list.label_screen</source>
+                <target>Ecran</target>
+            </trans-unit>
+            <trans-unit id="list.label_en">
+                <source>list.label_en</source>
+                <target>anglais</target>
+            </trans-unit>
+            <trans-unit id="list.label_fr">
+                <source>list.label_fr</source>
+                <target>français</target>
+            </trans-unit>
+            <trans-unit id="list.label_offline">
+                <source>list.label_offline</source>
+                <target>Offline</target>
+            </trans-unit>
+            <trans-unit id="list.label_offline_message">
+                <source>list.label_offline_message</source>
+                <target>Message offline</target>
+            </trans-unit>
+            <trans-unit id="list.label_email_support">
+                <source>list.label_email_support</source>
+                <target>Email support</target>
+            </trans-unit>
+            <trans-unit id="list.label_email_marketing">
+                <source>list.label_email_marketing</source>
+                <target>Email marketing</target>
+            </trans-unit>
+            <trans-unit id="list.label_iphone">
+                <source>list.label_iphone</source>
+                <target>IPhone</target>
+            </trans-unit>
+            <trans-unit id="list.label_android">
+                <source>list.label_android</source>
+                <target>Android</target>
+            </trans-unit>
+            <trans-unit id="list.label_ipad">
+                <source>list.label_ipad</source>
+                <target>IPad</target>
+            </trans-unit>
+            <trans-unit id="list.label_web">
+                <source>list.label_web</source>
+                <target>Web</target>
+            </trans-unit>
+<!-- FILTRES  -->
+            <trans-unit id="filter.label_id">
+                <source>filter.label_id</source>
+                <target>Id</target>
+            </trans-unit>
+            <trans-unit id="filter.label_name">
+                <source>filter.label_name</source>
+                <target>Nom</target>
+            </trans-unit>
+            <trans-unit id="filter.label_support">
+                <source>filter.label_support</source>
+                <target>Support</target>
+            </trans-unit>
+            <trans-unit id="filter.label_screen">
+                <source>filter.label_screen</source>
+                <target>Ecran</target>
+            </trans-unit>
+            <trans-unit id="filter.label_en">
+                <source>filter.label_en</source>
+                <target>anglais</target>
+            </trans-unit>
+            <trans-unit id="filter.label_fr">
+                <source>filter.label_fr</source>
+                <target>français</target>
+            </trans-unit>
+            <trans-unit id="filter.label_offline">
+                <source>filter.label_offline</source>
+                <target>Offline</target>
+            </trans-unit>
+<!-- FORMS -->
+            <trans-unit id="form.label_id">
+                <source>form.label_id</source>
+                <target>Id</target>
+            </trans-unit>
+            <trans-unit id="form.label_name">
+                <source>form.label_name</source>
+                <target>Nom</target>
+            </trans-unit>
+            <trans-unit id="form.label_support">
+                <source>form.label_support</source>
+                <target>Support</target>
+            </trans-unit>
+            <trans-unit id="form.label_screen">
+                <source>form.label_screen</source>
+                <target>Ecran</target>
+            </trans-unit>
+            <trans-unit id="form.label_en">
+                <source>form.label_en</source>
+                <target>anglais</target>
+            </trans-unit>
+            <trans-unit id="form.label_fr">
+                <source>form.label_fr</source>
+                <target>français</target>
+            </trans-unit>
+            <trans-unit id="form.label_offline">
+                <source>form.label_offline</source>
+                <target>Offline</target>
+            </trans-unit>
+            <trans-unit id="form.label_offline_message">
+                <source>form.label_offline_message</source>
+                <target>Message offline</target>
+            </trans-unit>
+            <trans-unit id="form.label_email_support">
+                <source>form.label_email_support</source>
+                <target>Email support</target>
+            </trans-unit>
+            <trans-unit id="form.label_email_marketing">
+                <source>form.label_email_marketing</source>
+                <target>Email marketing</target>
+            </trans-unit>
+            <trans-unit id="form.label_iphone">
+                <source>form.label_iphone</source>
+                <target>IPhone</target>
+            </trans-unit>
+            <trans-unit id="form.label_android">
+                <source>form.label_android</source>
+                <target>Android</target>
+            </trans-unit>
+            <trans-unit id="form.label_ipad">
+                <source>form.label_ipad</source>
+                <target>IPad</target>
+            </trans-unit>
+            <trans-unit id="form.label_web">
+                <source>form.label_web</source>
+                <target>Web</target>
+            </trans-unit>
+            <trans-unit id="form.label_url_store">
+                <source>form.label_url_store</source>
+                <target>URL Store</target>
+            </trans-unit>
+            <trans-unit id="form.label_store_version">
+                <source>form.label_store_version</source>
+                <target>Version Store</target>
+            </trans-unit>
+            <trans-unit id="form.label_store_message">
+                <source>form.label_store_message</source>
+                <target>Store Message</target>
+            </trans-unit>
+            <trans-unit id="form.label_block_version">
+                <source>form.label_block_version</source>
+                <target>Version de blocage</target>
+            </trans-unit>
+            <trans-unit id="form.label_block_message">
+                <source>form.label_block_message</source>
+                <target>Message de blocage</target>
+            </trans-unit>
+            <trans-unit id="form.label_translations">
+                <source>form.label_translations</source>
+                <target>Traductions</target>
+            </trans-unit>
+            <trans-unit id="form.label_content">
+                <source>form.label_content</source>
+                <target>Valeur</target>
+            </trans-unit>
+<!-- SHOW  -->
+            <trans-unit id="show.label_id">
+                <source>show.label_id</source>
+                <target>Id</target>
+            </trans-unit>
+            <trans-unit id="show.label_enabled">
+                <source>show.label_enabled</source>
+                <target>Actif</target>
+            </trans-unit>
+            <trans-unit id="show.label_name">
+                <source>show.label_name</source>
+                <target>Nom</target>
+            </trans-unit>
+            <trans-unit id="show.label_support">
+                <source>show.label_support</source>
+                <target>Support</target>
+            </trans-unit>
+            <trans-unit id="show.label_screen">
+                <source>show.label_screen</source>
+                <target>Ecran</target>
+            </trans-unit>
+            <trans-unit id="show.label_en">
+                <source>show.label_en</source>
+                <target>anglais</target>
+            </trans-unit>
+            <trans-unit id="show.label_fr">
+                <source>show.label_fr</source>
+                <target>français</target>
+            </trans-unit>
+            <trans-unit id="show.label_offline">
+                <source>show.label_offline</source>
+                <target>Offline</target>
+            </trans-unit>
+            <trans-unit id="show.label_offline_message">
+                <source>show.label_offline_message</source>
+                <target>Message offline</target>
+            </trans-unit>
+            <trans-unit id="show.label_email_support">
+                <source>show.label_email_support</source>
+                <target>Email support</target>
+            </trans-unit>
+            <trans-unit id="show.label_email_marketing">
+                <source>show.label_email_marketing</source>
+                <target>Email marketing</target>
+            </trans-unit>
+            <trans-unit id="show.label_iphone">
+                <source>show.label_iphone</source>
+                <target>IPhone</target>
+            </trans-unit>
+            <trans-unit id="show.label_android">
+                <source>show.label_android</source>
+                <target>Android</target>
+            </trans-unit>
+            <trans-unit id="show.label_ipad">
+                <source>show.label_ipad</source>
+                <target>IPad</target>
+            </trans-unit>
+            <trans-unit id="show.label_web">
+                <source>show.label_web</source>
+                <target>Web</target>
+            </trans-unit>
+            <trans-unit id="show.label_url_store">
+                <source>show.label_url_store</source>
+                <target>URL Store</target>
+            </trans-unit>
+            <trans-unit id="show.label_store_version">
+                <source>show.label_store_version</source>
+                <target>Version Store</target>
+            </trans-unit>
+            <trans-unit id="show.label_store_message">
+                <source>show.label_store_message</source>
+                <target>Store Message</target>
+            </trans-unit>
+            <trans-unit id="show.label_block_version">
+                <source>show.label_block_version</source>
+                <target>Version de blocage</target>
+            </trans-unit>
+            <trans-unit id="show.label_block_message">
+                <source>show.label_block_message</source>
+                <target>Message de blocage</target>
+            </trans-unit>
+            <trans-unit id="show.label_translation_updated_at">
+                <source>show.label_translation_updated_at</source>
+                <target>Mise à jour des traductions</target>
+            </trans-unit>
+            <trans-unit id="show.label_longitude">
+                <source>show.label_longitude</source>
+                <target>Longitude</target>
+            </trans-unit>
+            <trans-unit id="show.label_latitude">
+                <source>show.label_latitude</source>
+                <target>Longitude</target>
+            </trans-unit>
+            <trans-unit id="show.label_country">
+                <source>show.label_country</source>
+                <target>Pays</target>
+            </trans-unit>
+            <trans-unit id="show.label_city">
+                <source>show.label_city</source>
+                <target>Ville</target>
+            </trans-unit>
+            <trans-unit id="show.label_postal_code">
+                <source>show.label_postal_code</source>
+                <target>Code postal</target>
+            </trans-unit>
+            <trans-unit id="show.label_adress">
+                <source>show.label_adress</source>
+                <target>Adresse</target>
+            </trans-unit>
+            <trans-unit id="show.label_translations">
+                <source>show.label_translations</source>
+                <target>Traductions</target>
+            </trans-unit>
+            <trans-unit id="show.label_content">
+                <source>show.label_content</source>
+                <target>Valeur</target>
+            </trans-unit>
+<!-- ERRORS -->
+            <trans-unit id="flash_configuration_already_exists_error">
+                <source>flash_configuration_already_exists_error</source>
+                <target>Un objet configuration existe déja, il ne peut y envoir qu'un.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

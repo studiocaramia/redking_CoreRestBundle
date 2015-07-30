@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="redking_core_rest.admin.translation.class">Redking\Bundle\CoreRestBundle\Admin\TranslationAdmin</parameter>
+        <parameter key="redking_core_rest.admin.configuration.class">Redking\Bundle\CoreRestBundle\Admin\ConfigurationAdmin</parameter>
+        <parameter key="redking_core_rest.admin.configuration_platform.class">Redking\Bundle\CoreRestBundle\Admin\ConfigurationPlatformAdmin</parameter>
+
+        <parameter key="redking_core_rest.configuration_platform.class">Redking\Bundle\CoreRestBundle\Document\ConfigurationPlatform</parameter>
+    </parameters>
+
+    <services>
+
+        <service id="redking_core_rest.admin.translation" class="%redking_core_rest.admin.translation.class%">
+            <argument />
+            <argument>%redking_core_rest.translation.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+            <tag name="sonata.admin" manager_type="doctrine_mongodb" group="Redking" label="Translation" label_catalogue="RedkingCoreRestBundle" label_translator_strategy="sonata.admin.label.strategy.underscore" />
+            <call method="setTranslationDomain">
+                <argument>RedkingCoreRestBundle</argument>
+            </call>
+        </service>
+        <service id="redking_core_rest.admin.configuration" class="%redking_core_rest.admin.configuration.class%">
+            <argument />
+            <argument>%redking_core_rest.configuration.class%</argument>
+            <!-- <argument>SonataAdminBundle:CRUD</argument> -->
+            <argument>RedkingCoreRestBundle:ConfigurationAdmin</argument>
+            <tag name="sonata.admin" manager_type="doctrine_mongodb" group="Redking" label="Configuration" label_catalogue="RedkingCoreRestBundle" label_translator_strategy="sonata.admin.label.strategy.underscore" />
+            <call method="setTranslationDomain">
+                <argument>RedkingCoreRestBundle</argument>
+            </call>
+        </service>
+
+        <!-- Admin hidden -->
+        <service id="redking_core_rest.admin.configuration_platform" class="%redking_core_rest.admin.configuration_platform.class%">
+            <argument />
+            <argument>%redking_core_rest.configuration_platform.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+            <tag name="sonata.admin" manager_type="doctrine_mongodb" group="Redking" label="ConfigurationPlatform" label_catalogue="RedkingCoreRestBundle" label_translator_strategy="sonata.admin.label.strategy.underscore" show_in_dashboard="false" />
+            <call method="setTranslationDomain">
+                <argument>RedkingCoreRestBundle</argument>
+            </call>
+        </service>
+
+    </services>
+    
+</container>

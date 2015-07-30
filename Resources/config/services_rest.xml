@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+  <parameters>
+    <parameter key="redking_core_rest.configuration.class">Redking\Bundle\CoreRestBundle\Document\Configuration</parameter>
+    <parameter key="redking_core_rest.configuration.form.class">Redking\Bundle\CoreRestBundle\Form\ConfigurationType</parameter>
+    <parameter key="redking_core_rest.configuration.handler.class">Redking\Bundle\CoreRestBundle\Handler\BaseHandler</parameter>
+    <parameter key="redking_core_rest.configuration.controller.class">Redking\Bundle\CoreRestBundle\Controller\ConfigurationsController</parameter>
+    <parameter key="redking_core_rest.translation.class">Redking\Bundle\CoreRestBundle\Document\Translation</parameter>
+    <parameter key="redking_core_rest.translation.form.class">Redking\Bundle\CoreRestBundle\Form\TranslationType</parameter>
+    <parameter key="redking_core_rest.translation.handler.class">Redking\Bundle\CoreRestBundle\Handler\BaseHandler</parameter>
+    <parameter key="redking_core_rest.translation.controller.class">Redking\Bundle\CoreRestBundle\Controller\TranslationsController</parameter>
+    <parameter key="redking_core_rest.api.controller.class">Redking\Bundle\CoreRestBundle\Controller\EmptyController</parameter>
+    <parameter key="redking_core_rest.activity.class">Redking\Bundle\CoreRestBundle\Document\Activity</parameter>
+    <parameter key="redking_core_rest.activity.form.class">Redking\Bundle\CoreRestBundle\Form\ActivityType</parameter>
+    <parameter key="redking_core_rest.activity.handler.class">Redking\Bundle\CoreRestBundle\Handler\BaseHandler</parameter>
+    <parameter key="redking_core_rest.activity.controller.class">Redking\Bundle\CoreRestBundle\Controller\ActivitysController</parameter>
+  </parameters>
+  <services>
+    <service id="redking_core_rest.configuration.handler" class="%redking_core_rest.configuration.handler.class%">
+      <argument type="service" id="doctrine_mongodb.odm.document_manager"/>
+      <argument>%redking_core_rest.configuration.class%</argument>
+      <argument>%redking_core_rest.configuration.form.class%</argument>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="logger"/>
+      <argument type="service" id="event_dispatcher"/>
+      <tag name="monolog.logger" channel="redking_rest"/>
+    </service>
+    <service id="redking_core_rest.configuration.controller" class="%redking_core_rest.configuration.controller.class%">
+      <argument type="service" id="redking_core_rest.configuration.handler"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+    </service>
+    <service id="redking_core_rest.translation.handler" class="%redking_core_rest.translation.handler.class%">
+      <argument type="service" id="doctrine_mongodb.odm.document_manager"/>
+      <argument>%redking_core_rest.translation.class%</argument>
+      <argument>%redking_core_rest.translation.form.class%</argument>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="logger"/>
+      <argument type="service" id="event_dispatcher"/>
+      <tag name="monolog.logger" channel="redking_rest"/>
+    </service>
+    <service id="redking_core_rest.translation.controller" class="%redking_core_rest.translation.controller.class%">
+      <argument type="service" id="redking_core_rest.translation.handler"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+    </service>
+    <service id="redking_core_rest.api.controller" class="%redking_core_rest.api.controller.class%">
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+    </service>
+    <service id="redking_core_rest.activity.handler" class="%redking_core_rest.activity.handler.class%">
+      <argument type="service" id="doctrine_mongodb.odm.document_manager"/>
+      <argument>%redking_core_rest.activity.class%</argument>
+      <argument>%redking_core_rest.activity.form.class%</argument>
+      <argument type="service" id="form.factory"/>
+      <argument type="service" id="logger"/>
+      <argument type="service" id="event_dispatcher"/>
+      <tag name="monolog.logger" channel="redking_rest"/>
+    </service>
+    <service id="redking_core_rest.activity.controller" class="%redking_core_rest.activity.controller.class%">
+      <argument type="service" id="redking_core_rest.activity.handler"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+    </service>
+  </services>
+</container>

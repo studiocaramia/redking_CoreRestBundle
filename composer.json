@@ -1,0 +1,45 @@
+{
+    "name": "redking/core-rest-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony 2 ",
+    "keywords": [ "symfony2", "rest", "crud", "mongodb"],
+    "homepage": "https://bitbucket.org/redkingteam/redkingcorerestbundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Damien Matabon",
+            "homepage": "http://www.makemyweb.fr/",
+            "email": "damien.matabon@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.3.*",
+        "sensio/framework-extra-bundle": "~3.0,>=3.0.2",
+        "sensio/generator-bundle": "~2.3",
+        "symfony/monolog-bundle": "~2.4",
+        "doctrine/mongodb-odm-bundle": "3.0.*@dev",
+        "friendsofsymfony/rest-bundle": "~1.6",
+        "jms/serializer-bundle": "0.13.*@dev",
+        "nelmio/api-doc-bundle": "@stable",
+        "davidbadura/fixtures-bundle": "1.0.x-dev",
+        "davidbadura/faker-bundle": "1.0.*",
+        "redking/odm-translator-bundle": "dev-master",
+        "sbk/cron-bundle": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4"
+    },
+    "autoload": {
+        "psr-0": { "Redking\\Bundle\\CoreRestBundle": "" }
+    },
+    "repositories":[
+        {
+            "type":"vcs",
+            "url": "https://github.com/studiocaramia/redking_ODMTranslatorBundle"
+        }
+    ],
+    "target-dir": "Redking/Bundle/CoreRestBundle"
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="redking_core_rest.activity.recorder.class">Redking\Bundle\CoreRestBundle\Service\ActivityRecorder</parameter>
+        <parameter key="redking_core_rest.activity.class">Redking\Bundle\CoreRestBundle\Document\Activity</parameter>
+    </parameters>
+
+    <services>
+
+        <!-- Doctrine event listener -->
+        <service id="redking_core_rest.document.subscriber" class="Redking\Bundle\CoreRestBundle\EventListener\DocumentEventSubscriber">
+            <tag name="doctrine_mongodb.odm.event_subscriber" />
+        </service>
+        
+        <!-- Rest event listener -->
+        <service id="redking_core_rest.rest.subscriber" class="Redking\Bundle\CoreRestBundle\EventListener\RestEventSubscriber">
+            <tag name="kernel.event_subscriber" />
+            <argument type="service" id="redking_core_rest.activity.recorder" />
+            <call method="setDocumentsSubscribed">
+                <argument>%redking_core_rest.document_for_activities%</argument>
+            </call>
+        </service>       
+
+        <!-- Activity Recorder -->
+        <service id="redking_core_rest.activity.recorder" class="%redking_core_rest.activity.recorder.class%">
+            <argument type="service" id="doctrine_mongodb" />
+            <argument>%redking_core_rest.activity.class%</argument>
+        </service>
+
+    </services>
+</container>

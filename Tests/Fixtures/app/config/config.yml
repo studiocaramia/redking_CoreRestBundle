@@ -1,0 +1,84 @@
+framework:
+    secret: secret
+    test: ~
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    templating:
+        engines: ['twig','php']
+    default_locale:  "en"
+    trusted_proxies: ~
+    session:         ~
+    fragments:       ~
+    http_method_override: true
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+    exception_controller: 'FOS\RestBundle\Controller\ExceptionController::showAction'
+
+doctrine_mongodb:
+    connections:
+        default:
+            server: mongodb://127.0.0.1
+    default_database: redking_test
+    document_managers:
+        default:
+            auto_mapping: true
+
+monolog:
+    handlers:
+        main:
+            type:  stream
+            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
+        firephp:
+            type:  firephp
+            level: info
+        chromephp:
+            type:  chromephp
+            level: info
+
+fos_rest:
+    param_fetcher_listener: true
+    view:
+        formats:
+            json : true
+            html: false
+    routing_loader:
+        default_format: json
+        include_format: false
+    format_listener:
+        rules:
+            - { path: ^/api/, priorities: [ json ], fallback_format: ~, prefer_extension: false }
+    exception:
+        codes: 
+            'Symfony\Component\Routing\Exception\ResourceNotFoundException': 404
+            'InvalidArgumentException': 400
+        messages:
+            'Symfony\Component\Routing\Exception\ResourceNotFoundException': true
+            'InvalidArgumentException': true
+
+nelmio_api_doc:
+    request_listener:
+        enabled:              false
+    sandbox:
+        body_format:
+            formats: [json]
+            default_format: json
+        request_format:
+            formats:
+                json: application/json
+
+# JMS Serialize
+jms_serializer:
+    metadata:
+        directories:
+            FOSUserBundle:
+                path: "%kernel.root_dir%/Resources/FOSUserBundle/serializer"
+                namespace_prefix: "FOS\\UserBundle"
+
+david_badura_faker:
+    locale: fr_FR

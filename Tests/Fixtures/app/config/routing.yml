@@ -1,0 +1,5 @@
+# Test Routes
+redking_core_rest_api:
+    resource: "@RedkingCoreRestBundle/Resources/config/routing_rest.xml"
+    type: rest
+    prefix:   /api/v1

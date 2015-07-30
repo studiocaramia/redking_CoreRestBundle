@@ -1,0 +1,44 @@
+<?php
+namespace {{ namespace }}\Tests\Controller;
+
+use Redking\Bundle\CoreRestBundle\Tests\Controller\CoreRestControllerTest;
+
+class {{ controller }} extends CoreRestControllerTest
+{
+    
+    protected static function defineBasics()
+    {
+        self::$api_prefix = '';
+    }
+
+    protected static function defineParams()
+    {
+        self::$post_invalid_params = array(
+            
+            );
+
+        self::$post_params = array(
+            
+            );
+   
+        self::$put_invalid_params = array(
+            
+            );
+
+        self::$put_params = array(
+            
+            );
+    }
+
+    protected static function definePostExpected()
+    {
+        self::$post_expected = new \stdClass;
+    }
+
+    protected static function definePutExpected()
+    {
+        self::$put_expected = clone self::$post_expected;
+    }
+
+    
+}

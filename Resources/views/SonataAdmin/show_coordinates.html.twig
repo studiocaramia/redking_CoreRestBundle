@@ -1,0 +1,34 @@
+{% extends 'SonataAdminBundle:CRUD:base_show_field.html.twig' %}
+
+{% block field %}
+    <div>
+        {% if object.coordinates is defined and object.coordinates is not null %}
+            <table class="table table-condensed table-striped table-bordered">
+                <tr>
+                    <th class="col-md-4">{{ 'show.label_latitude'|trans({}, 'RedkingCoreRestBundle')}}</th>
+                    <td class="col-md-8">{{ object.coordinates.latitude }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'show.label_longitude'|trans({}, 'RedkingCoreRestBundle')}}</th>
+                    <td>{{ object.coordinates.longitude }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'show.label_country'|trans({}, 'RedkingCoreRestBundle')}}</th>
+                    <td>{{ object.coordinates.country }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'show.label_city'|trans({}, 'RedkingCoreRestBundle')}}</th>
+                    <td>{{ object.coordinates.city }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'show.label_postal_code'|trans({}, 'RedkingCoreRestBundle')}}</th>
+                    <td>{{ object.coordinates.getPostalCode }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'show.label_adress'|trans({}, 'RedkingCoreRestBundle')}}</th>
+                    <td>{{ object.coordinates.adress }}</td>
+                </tr>
+            </table>
+        {% endif %}
+    </div>
+{% endblock %}

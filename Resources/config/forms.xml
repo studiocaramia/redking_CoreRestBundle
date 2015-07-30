@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="redking_core_rest.form.type.coordinates.class">Redking\Bundle\CoreRestBundle\Form\CoordinatesType</parameter>
+    </parameters>
+    
+    <services>
+        <service id="redking_core_rest.form.type.timestamp" class="Redking\Bundle\CoreRestBundle\Form\Type\TimestampType">
+            <tag name="form.type" alias="timestamp" />
+        </service>
+
+        <service id="redking_core_rest.form.type.coordinates" class="%redking_core_rest.form.type.coordinates.class%">
+            <tag name="form.type" alias="coordinates"/>
+        </service>
+
+        <service id="redking_core_rest.form.type.json" class="Redking\Bundle\CoreRestBundle\Form\Type\JsonType">
+            <tag name="form.type" alias="json" />
+        </service>
+
+    </services>
+</container>

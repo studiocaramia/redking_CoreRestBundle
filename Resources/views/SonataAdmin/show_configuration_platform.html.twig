@@ -1,0 +1,32 @@
+{% extends 'SonataAdminBundle:CRUD:base_show_field.html.twig' %}
+
+{% block field %}
+    <div>
+        {% if field_description.options['field'] is defined %}
+            {% for config_platform in attribute(object, field_description.options['field']) %}    
+                <table class="table table-condensed table-striped table-bordered">
+                    <tr>
+                        <th class="col-md-6">{{ 'show.label_url_store'|trans({}, 'RedkingCoreRestBundle')}}</th>
+                        <td>{{ config_platform.getUrlStore }}</td>
+                    </tr>
+                    <tr>
+                        <th>{{ 'show.label_store_version'|trans({}, 'RedkingCoreRestBundle')}}</th>
+                        <td>{{ config_platform.getStoreVersion }}</td>
+                    </tr>
+                    <tr>
+                        <th>{{ 'show.label_store_message'|trans({}, 'RedkingCoreRestBundle')}}</th>
+                        <td>{{ config_platform.getStoreMessage }}</td>
+                    </tr>
+                    <tr>
+                        <th>{{ 'show.label_block_version'|trans({}, 'RedkingCoreRestBundle')}}</th>
+                        <td>{{ config_platform.getBlockVersion }}</td>
+                    </tr>
+                    <tr>
+                        <th>{{ 'show.label_block_message'|trans({}, 'RedkingCoreRestBundle')}}</th>
+                        <td>{{ config_platform.getBlockMessage }}</td>
+                    </tr>
+                </table>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}
