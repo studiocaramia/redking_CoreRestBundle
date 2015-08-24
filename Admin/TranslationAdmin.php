@@ -81,4 +81,18 @@ class TranslationAdmin extends Admin
             ->add('translations', 'string', array('template' => 'RedkingODMTranslatorBundle:SonataAdmin:show_translations.html.twig'))
         ;
     }
+
+    protected function getExportFields(){
+
+        $translations = array();
+        foreach($this->getConfigurationPool()->getContainer()->getParameter('locales') as $locale){
+            $translations[$locale] = "contentTranslations[$locale]";
+        }
+
+        $fields = array_merge(parent::getExportFields(),$translations);
+
+        $fields = array_diff($fields,['content','translations']);
+
+        return $fields;
+    }
 }
