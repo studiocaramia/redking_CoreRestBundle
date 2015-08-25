@@ -82,7 +82,7 @@ class TranslationAdmin extends Admin
         ;
     }
 
-    protected function getExportFields(){
+    public function getExportFields(){
 
         $translations = array();
         foreach($this->getConfigurationPool()->getContainer()->getParameter('locales') as $locale){
